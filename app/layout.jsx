@@ -9,7 +9,7 @@ const brand = Bricolage_Grotesque({subsets : ['latin'], weight : ["200", "300", 
 
 export const metadata = {
   title: "Testify",
-  description: "Sharing Life Experiences and Testimonies of God's Grace Over 10,000 lives",
+  description: "Join Thousands of Christians Around the World Sharing Their Life-Changing Stories. Sharing Life Experiences and Testimonies of God's Grace Over 10,000 lives",
 };
 
 export default function RootLayout({ children }) {

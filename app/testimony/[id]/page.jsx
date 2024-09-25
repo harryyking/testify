@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation'
 import Card from '@/components/Card'
 import Link from 'next/link'
 import { ChevronLeft } from 'lucide-react'
+import Comment from '@/components/Comment'
 
 
 const CommentPage = () => {
@@ -49,7 +50,7 @@ const CommentPage = () => {
         </div>
 
         
-        <div className="mt-6">
+        {/* <div className="mt-6">
         <h2 className="text-xl font-bold mb-4">Comments</h2>
         {comments.length > 0 ? (
           comments.map((comment) => (
@@ -61,7 +62,17 @@ const CommentPage = () => {
         ) : (
           <p>No comments yet. Be the first to comment!</p>
         )}
-      </div>
+      </div> */}
+
+      { 
+        comments.map((comment) => (
+          <Comment 
+          key={comment._id}
+          comment={comment}
+          />
+        ))
+      }
+   
         
         <ComponentForm/>
     </section>
