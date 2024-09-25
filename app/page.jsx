@@ -31,7 +31,7 @@ export default function Home() {
         </p>
 
         <Link href="/support">
-        <button className="btn btn-primary my-2">SUPPORT THE VISION</button>
+        <button className="btn btn-primary my-4">SUPPORT THE VISION</button>
         </Link>
      
 

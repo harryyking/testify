@@ -12,7 +12,7 @@ const NavBar = () => {
     
   </div>
   <div className="navbar-center">
-    <Link href="/" className="btn btn-ghost text-xl"> Testify <sup>🤩</sup> <sub>🥺</sub> </Link>
+    <Link href="/" className="btn btn-ghost text-xl"> Testify </Link>
   </div>
   <div className="navbar-end">
     <Link href="https://t.me/har_ryyyy" className="cursor-pointer">
