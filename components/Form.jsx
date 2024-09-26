@@ -53,10 +53,9 @@ const Form = () => {
         <div>
             <label htmlFor="instagram" className='label label-text'>Show off your instagram handle?</label>
             <input 
-            {...register("instagram", {required: true})}
+            {...register("instagram", {required: false})}
             type="text" 
             className='input input-bordered w-full' placeholder="@"/>
-            {errors.username && <p className="text-secondary text-xs">Oops! add your handle</p>}
         </div>
         <button className='btn btn-primary w-full' type="submit" >Send</button>
     </form>

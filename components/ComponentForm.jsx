@@ -1,7 +1,7 @@
 "use client"
 import { useForm } from 'react-hook-form'
 
-const ComponentForm = () => {
+const ComponentForm = ({testimonyId}) => {
     const{
         register,
         handleSubmit,
@@ -22,8 +22,10 @@ const ComponentForm = () => {
                     headers: {
                         "Content-type" : "application/json",
                     },
-                    body: JSON.stringify(
-                        data),
+                    body: JSON.stringify({
+                        ...data,
+                        testimonyId,
+                    }),
                 })
 
             if(response.ok){
@@ -39,6 +41,13 @@ const ComponentForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='space-y-4'>
+
+        <input 
+        type="hidden" 
+        value={testimonyId}
+        {...register("testimonyId")}
+        />
+
         <div>
             <label htmlFor="text" className='label label-text'> Your comment</label>
             <textarea 

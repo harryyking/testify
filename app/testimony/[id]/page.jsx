@@ -10,11 +10,13 @@ import Comment from '@/components/Comment'
 
 const CommentPage = () => {
     const {id} = useParams();
+    
 
     const [testimony, setTestimony] = useState(null);
     const [comments, setComments] = useState([]);
     const [commentText, setCommentText] = useState("");
     
+
     useEffect(() => {
         if (id) {
             const fetchTestimonyData = async() => {
@@ -74,7 +76,7 @@ const CommentPage = () => {
       }
    
         
-        <ComponentForm/>
+        <ComponentForm testimonyId={id}/>
     </section>
   )
 }
